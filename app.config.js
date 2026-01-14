@@ -24,5 +24,31 @@ module.exports = {
   },
   web: {
     favicon: './assets/favicon.png'
-  }
+  },
+  plugins: [
+    ['@react-native-firebase/app'],
+    ['@react-native-firebase/auth'],
+    ['@react-native-firebase/crashlytics'],
+    [
+      'expo-camera',
+      {
+        cameraPermission: 'Allow $(PRODUCT_NAME) to access your camera',
+        microphonePermission: 'Allow $(PRODUCT_NAME) to access your microphone',
+        recordAudioAndroid: true
+      }
+    ],
+    [
+      'expo-build-properties',
+      {
+        android: {
+          minSdkVersion: 26,
+          compileSdkVersion: 35,
+          targetSdkVersion: 35
+        },
+        ios: {
+          useFrameworks: 'static'
+        }
+      }
+    ]
+  ]
 };
