@@ -29,7 +29,7 @@ Prerequisites and Setup/Run used with Windows 11 OS
 
 Notice the error in powershell after running the command `npm run dev-android`...
 
-![powershell - npm run dev-android -> fails](https://github.com/jamespageced/expo-camera-with-firebase-build-error/blob/main/expo-camera-firebase-npm-run-build-failure.png?raw=true)
+![powershell - npm run dev-android -> fails](https://github.com/jamespageced/expo-camera-with-firebase-build-error/blob/main/assets/expo-camera-firebase-npm-run-build-failure.png?raw=true)
 
 **See temporary workarounds to get project to allowed to build and run below**
 
