@@ -31,9 +31,9 @@ Notice the error in powershell after running the command `npm run dev-android`..
 
 ![powershell - npm run dev-android -> fails](https://github.com/jamespageced/expo-camera-with-firebase-build-error/blob/main/assets/expo-camera-firebase-npm-run-build-failure.png?raw=true)
 
-**See temporary workarounds to get project to allowed to build and run below**
+**See temporary workaround to get project to allowed to build and run below**
 
-- note: these temporary workarounds are not solutions, because neither allow for both expo-camera and firebase to run together
+- note: this temporary workaround is not a solution, because it will not allow both expo-camera and firebase to run together
 
 1. Disable firebase plugin
   - in the file app.config.js, comment out the following lines:
@@ -46,23 +46,8 @@ Notice the error in powershell after running the command `npm run dev-android`..
     - `"@react-native-firebase/app": "^23.7.0",`
     - `"@react-native-firebase/auth": "^23.7.0",`
     - `"@react-native-firebase/crashlytics": "^23.7.0",`
-  - back in powershell, execute command: `npm run dev-android`
-
-2. Disable expo-camera plugin
-  - in the file app.config.js, comment out the following lines:
-  ```
-  //  [
-  //    'expo-camera',
-  //    {
-  //      cameraPermission: 'Allow $(PRODUCT_NAME) to access your camera',
-  //      microphonePermission: 'Allow $(PRODUCT_NAME) to access your microphone',
-  //      recordAudioAndroid: true
-  //    }
-  //  ],
-  ```
-  - in the file package.json, delete the line `"expo-camera": "~16.1.11",`
   - delete the file package-lock.json
-  - delete the node_modules folder (and the folders ".expo" and "android" if they exist)
+    - also: delete the node_modules folder if you have them in your project
   - back in powershell, execute command: `npm install`
   - execute command: `npm run dev-android`
 
